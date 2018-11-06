@@ -11,7 +11,7 @@ export class AppController {
 
   @Get()
   root(): string {
-    return 'Hello, Dynamisch Draaiboek!';
+    return 'Hello, Server!';
   }
   @Get('version')
   version(): string {

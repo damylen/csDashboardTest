@@ -12,6 +12,6 @@
     "postinstall": "lerna bootstrap",
     "dev": "lerna run --parallel dev",
     "build": "lerna run build",
-    "docker:build": "docker build -t dynamisch-draaiboek/haarlem-2018 ."
+    "docker:build": "docker build -t demo ."
   }
 }
