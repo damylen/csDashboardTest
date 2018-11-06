@@ -18,6 +18,7 @@ import { Project } from './classes/Project';
 import { TestComponent } from './components/test-component/test-component';
 import Component from 'vue-class-component';
 import { BackgroundComponent } from './components/background-component/background-component';
+import { ButtonComponent } from './components/button-component/button-component';
 const LAYER_URL = process.env.NODE_ENV !== 'production' ? 'http://localhost:3000/layers/' : 'http://192.168.1.53:3000/layers/';
 
 LayoutManager.add({
@@ -174,7 +175,13 @@ export const project: IProject = {
             type: "gauge"
           },
           options: { class: 'gauge-widget' },
-        }
+        },
+        {
+          id: 'button',
+          component: ButtonComponent,
+          datasource: 'project',         
+          options: { class: 'simple-button-widget' },
+        },
       ]
     },
     {

@@ -8,6 +8,7 @@ export class Project implements IDatasource {
 
   public seconds: number = 0;
   public color = "white";
+  public buttonCount: number = 0;
   public chart = {
     type: "gauge",
     columns: [
@@ -30,6 +31,10 @@ export class Project implements IDatasource {
 
     this.socket.on('color', (color: string) => {
       this.color = color;
+    });
+
+    this.socket.on('buttonCount', (value: number) => {
+      this.buttonCount = value;
     });
     this.socket.on('exception', (data: any) => {
       console.log('event', data);

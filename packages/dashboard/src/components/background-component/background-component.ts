@@ -17,8 +17,17 @@ export class BackgroundComponent extends WidgetBase {
   public widget!: IWidget;
   public project?: Project;
 
-  public mounted() {
+
+  public async mounted() {
+    this.project = this.widget.content;
     
+  }
+
+  buttonClick() {
+    if (this.project) {
+      this.project.socket.emit('button','click');
+    }
+
   }
 
 
