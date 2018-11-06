@@ -20,6 +20,4 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw*
-packages/server/static/layers/
-input/**/*.*
 database.db
