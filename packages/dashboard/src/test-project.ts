@@ -272,10 +272,10 @@ export const project: IProject = {
           options: {
             class: 'data-map-container',
             token:
-              'pk.eyJ1IjoiZGFteWxlbiIsImEiOiJfdUUzLVhNIn0.7-Ogdnc6voJfUXOMBE1VPA',
+              '',
             mbOptions: {
               style: 'mapbox://styles/mapbox/light-v9',
-              center: [4.799119, 52.478137],
+              center: [6.581510, 53.190415],
               zoom: 13
             }
           } as MapOptions
