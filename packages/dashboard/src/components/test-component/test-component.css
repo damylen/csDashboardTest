@@ -1,0 +1,55 @@
+
+.event-card-active {
+    /* border-style: solid !important;
+    border-width: 2px !important;
+    border-color: blue !important; */
+    background: rgb(98, 148, 214) !important;    
+}
+
+.case-selector {
+    height: 100%;
+}
+
+.case-selector-line{
+    /* justify-content: space-between; */
+    
+}
+
+
+
+.case-scenario-title
+{
+    /* font-weight: 600; */
+    font-size: 15px;
+    width: 100%;
+    margin-left: 10px;
+
+}
+
+.selector-buttons {    
+    min-width: 150px;    
+    align-content: flex-end;
+    
+    margin: 5px;
+    margin-right:20px;    
+}
+
+.v-btn.v-btn--outline.default-scenario-case {
+    color: #B68C56 !important;
+    font-weight: 900;
+    background: lightgrey !important;
+    border-color: #B68C56 !important
+}
+
+.case-selector-button {
+    min-width: 15px;
+    margin:4px;
+    background: #05407793 !important;
+    color: black !important;
+    
+}
+
+.evenement-image
+{
+    cursor: pointer;
+}

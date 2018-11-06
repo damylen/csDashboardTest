@@ -1,0 +1,10 @@
+0 silly argv { _: [ 'run' ],
+0 silly argv   parallel: true,
+0 silly argv   lernaVersion: '3.4.3',
+0 silly argv   '$0': 'node_modules\\lerna\\cli.js',
+0 silly argv   script: 'dev' }
+1 notice cli v3.4.3
+2 verbose rootPath C:\arnoud\Projects\dynamisch-draaiboek\haarlem-2018
+3 error JSONError: Unexpected token / in JSON at position 886 while parsing near '...p": "^0.0.74",    // "@csnext/cs-form"...' in packages\dashboard\package.json
+3 error     at module.exports (C:\arnoud\Projects\dynamisch-draaiboek\haarlem-2018\node_modules\parse-json\index.js:26:19)
+3 error     at parse (C:\arnoud\Projects\dynamisch-draaiboek\haarlem-2018\node_modules\load-json-file\index.js:8:29)

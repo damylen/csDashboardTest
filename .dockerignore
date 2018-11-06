@@ -1,0 +1,7 @@
+dist
+/node_modules
+packages/dashboard/node_modules
+packages/server/node_modules
+packages/server/package-lock.json
+packages/maatregelen-importer/node_modules
+
