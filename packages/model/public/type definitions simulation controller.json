@@ -1,0 +1,49 @@
+{
+    "states": {
+        "soc": {
+            "title": "State of Charge",
+            "type": "number",
+            "unit": "",
+            "min": 0,
+            "max": 100
+        },
+        "power_consumption": {
+            "title": "power consumption",
+            "unit": "W",
+            "type": "number"
+        }
+    },
+    "types": {
+        "battery": {
+            "icon": "battery.png",
+            "states": [
+                "soc",
+                "power_consumption"
+            ],
+            "edits": {
+                "power_consumption": {
+                    "min": -5000,
+                    "max": 5000
+                }
+            },
+            "actions": {
+                "turnoff": {
+                    "title": "Turn Off"
+                },
+                "turnon": {
+                    "title": "Turn On"
+                }
+            }
+        },
+        "concentrator": {
+            "icon": "concentrator.png",
+            "states": [
+                "power_consumption"
+            ],
+            "children": [
+                "battery"
+            ],
+            "actions": {}
+        }
+    }
+}

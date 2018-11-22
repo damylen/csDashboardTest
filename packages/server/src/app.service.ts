@@ -38,6 +38,12 @@ export class AppService {
         }, 1000);
     }
 
+    @SubscribeMessage('model-state')
+    onModelState(client: Client, data: string) {
+        console.log('Got model state');
+        this.server.emit('model-state',data);        
+    }
+
     @SubscribeMessage('button')
     onButton(client : Client, data: string) {
         console.log('Button clicked');

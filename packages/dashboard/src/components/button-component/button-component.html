@@ -1,4 +1,16 @@
 <div :style="{ 'background' : widget.content.color }">
     <v-btn @click="buttonClick">Button ({{ widget.content.buttonCount }}) </v-btn>
     <v-slider v-model="sliderData" min="0" max="10" label="slider"></v-slider>
+   
+
+    <div v-for="device in widget.content.states" :key="device.id">
+        <h1>{{ device.name}}</h1>
+        <h3>{{ device.type }}</h3>
+
+        <div v-for="(value,key,index) in device.states" :key="index">
+            {{ key }} - {{ value }}
+        </div>
+
+
+    </div>
 </div>

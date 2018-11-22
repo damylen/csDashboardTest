@@ -1,0 +1,25 @@
+
+[   
+    {
+        "name": "test concentrator",
+        "id": "29aacb39-f7b9-41e9-91c4-fa25da961897",
+        "description": "test",
+        "type": "concentrator",
+        "states": {
+            "power_consumption": 100
+        },
+        "children": [
+            "963f6973-3959-465f-93ae-2c7c083241c9"
+        ],   
+        "actions": {}
+    },
+    {
+        "name": "test battery",
+        "id": "963f6973-3959-465f-93ae-2c7c083241c9",
+        "type": "battery",
+        "states": {
+            "soc": 72,
+            "power_consumption": 100
+        }
+    }
+]

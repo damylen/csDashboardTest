@@ -9,6 +9,8 @@ export class Project implements IDatasource {
   public seconds: number = 0;
   public color = "white";
   public buttonCount: number = 0;
+  public powerConsumption = 0;
+  public states = [];
   public chart = {
     type: "gauge",
     columns: [
@@ -28,6 +30,12 @@ export class Project implements IDatasource {
     this.socket.on('seconds', (data: any) => {
       this.seconds = data.value;
     });
+
+    this.socket.on('model-state', (data: any) => {
+      this.powerConsumption = data[0].states['power_consumption'];
+      this.states = data;
+      console.log(this.powerConsumption);
+    })
 
     this.socket.on('color', (color: string) => {
       this.color = color;
