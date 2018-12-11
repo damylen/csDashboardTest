@@ -113,11 +113,11 @@ function createPVTStates(measurement, db): Promise<Map<string, {}>> {
       for (const line of result) {
         states.set(line['time']['_nanoISO'], {
           "name": measurement,
-          "type": "PVT",
+          "id": device_uuid,
+          "type": "pvt",
           "states": {
             "power_consumption": line['power'],
-          },
-          "id": device_uuid
+          }
         });
       }
       resolve(states);

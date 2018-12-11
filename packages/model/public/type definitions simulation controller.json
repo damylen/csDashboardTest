@@ -5,10 +5,11 @@
             "type": "number",
             "unit": "",
             "min": 0,
-            "max": 100
+            "max": 100,
+            "icon": "soc.png"
         },
-        "power_consumption": {
-            "title": "power consumption",
+        "power": {
+            "title": "power",
             "unit": "W",
             "type": "number"
         }
@@ -16,22 +17,32 @@
     "types": {
         "battery": {
             "icon": "battery.png",
-            "states": [
-                "soc",
-                "power_consumption"
-            ],
-            "edits": {
+            "states": {
+                "soc": {
+                    "type": "soc"
+                },
                 "power_consumption": {
+                    "type": "power",
+                    "description": "....",
+                    "icon": "power.png"
+                },
+                "power_setpoint": {
+                    "type": "power",
+                    "description": "....",
+                    "icon": "power.png",
+                    "editable": true,
                     "min": -5000,
                     "max": 5000
                 }
             },
             "actions": {
                 "turnoff": {
-                    "title": "Turn Off"
+                    "title": "Turn Off",
+                    "enabled": false
                 },
                 "turnon": {
-                    "title": "Turn On"
+                    "title": "Turn On",
+                    "enabled": true
                 }
             }
         },
@@ -44,6 +55,20 @@
                 "battery"
             ],
             "actions": {}
+        },
+        "pvt": {
+            "states": {
+                "power_consumption": {
+                    "type": "power"
+                }
+            }
+        },
+        "baseload": {
+            "states": {
+                "power_consumption": {
+                    "type": "power"
+                }
+            }
         }
     }
 }
